@@ -172,8 +172,8 @@
      opacity: 0;
 }
 .loaded #loader-wrapper .loader-text{
-	-webkit-transition: opacity 0.2s ease-out;
-    transition: opacity 0.2s ease-out;
+	-webkit-transition: opacity 0s ease-out;
+    transition: opacity 0s ease-out;
     opacity: 0;
 }
 .loaded #loader {
@@ -201,24 +201,16 @@
     animation: flyinup 2s normal forwards;
 }
 .accessmenu .click-about:hover, .accessmenu .click-resume:hover, .accessmenu .click-portfolio:hover, .accessmenu .click-contact:hover {
-	transform: scale(1.05);
 	color: #73DCFF;
 	opacity: 0.9;
 }
 
-.accessmenu .name-wrapper:hover {
-	transform: scale(1.005);
-}
 #buffer {
 	height: 30%;
 }
 #navigate {
 	text-align: center;
 	font-family: MyFont;
-    /*position: fixed;
-	top: 15vw;
-	z-index: 900;*/
-    left: 0;
     width: 100%;
 	padding-left: 1%;
 	padding-right: 1%;
@@ -357,7 +349,6 @@
 	top: 0%;
 }
 .mini-click-about:hover, .mini-click-resume:hover, .mini-click-portfolio:hover, .mini-click-contact:hover,.p1 .mini-click-about, .p2 .mini-click-resume, .p3 .mini-click-portfolio, .p4 .mini-click-contact {
-	transform: scale(1.1);
 	color: #73DCFF;
 	opacity: 0.8;
 }

@@ -81,5 +81,5 @@ $(document).ready(function() {
 	setTimeout(function(){
 		$('body').removeClass('loadmenu');
 		$('body').addClass('scroll-fade-in');
-    }, 6500);
+    }, 7000);
 });
