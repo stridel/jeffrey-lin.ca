@@ -209,20 +209,24 @@
 .accessmenu .name-wrapper:hover {
 	transform: scale(1.005);
 }
+#buffer {
+	height: 30%;
+}
 #navigate {
 	text-align: center;
 	font-family: MyFont;
-    position: fixed;
-    top: 15vw;
+    /*position: fixed;
+	top: 15vw;
+	z-index: 900;*/
     left: 0;
-    width: 98%;
+    width: 100%;
 	padding-left: 1%;
 	padding-right: 1%;
-    height: 30%;
+    height: 40%;
 	display: table;
-	z-index: 900;
 }
 #navigate .name-wrapper {
+	vertical-align: middle;
 	position: relative;
 	left: 0%;
 	width: 30%;
@@ -236,19 +240,17 @@
 	font-size: 6.5vw;
 	color: #eeeeee;
 	position: relative;
-	top: 20%;
 	cursor: default;
 }
 #navigate .name-wrapper .namedesc {
 	font-size: 1.4vw;
 	color: #73DCFF;
 	position: relative;
-	top: 0;
 	cursor: default;
 }
 #navigate .click-about, #navigate .click-resume, #navigate .click-portfolio, #navigate .click-contact {
 	position: relative;
-	top: 3vw;
+	vertical-align: middle;
 	width: 10%;
 	height: 100%;
 	font-size: 2vw;
@@ -258,6 +260,9 @@
 }
 .click-about, .click-resume, .click-portfolio, .click-contact {
 	color: #A3A3A3;
+}
+#sub0 {
+	height: 100%;
 }
 /*/////////////////////////////////////////////////////*/
 #scrolldown-wrapper {
@@ -364,7 +369,7 @@
 .p1 #sub1, .p2 #sub2, .p3 #sub3, .p4 #sub4 {
 	opacity: 1;
 }
-.section {
+.scroll2, .scroll3, .scroll4, .scroll5 {
 	padding-left: 15%;
 	padding-right: 15%;
 }
