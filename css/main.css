@@ -226,16 +226,15 @@
 	padding: 10px;
 	display: table-cell;
 	cursor: pointer;
-	transition: transform .5s ease-in-out;
 }
 #navigate .name-wrapper .nameplate {
-	font-size: 6.5vw;
+	font-size: 6.5vmax;
 	color: #eeeeee;
 	position: relative;
 	cursor: default;
 }
 #navigate .name-wrapper .namedesc {
-	font-size: 1.4vw;
+	font-size: 1.4vmax;
 	color: #73DCFF;
 	position: relative;
 	cursor: default;
@@ -245,10 +244,10 @@
 	vertical-align: middle;
 	width: 10%;
 	height: 100%;
-	font-size: 2vw;
+	font-size: 2vmax;
 	display: table-cell;
 	cursor: pointer;
-	transition: all .5s ease-in-out;
+	transition: color .5s ease-in-out;
 }
 .click-about, .click-resume, .click-portfolio, .click-contact {
 	color: #A3A3A3;
@@ -270,8 +269,8 @@
 	-webkit-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
 	transform: rotate(90deg);
-	width: 3.5vw;
-	height: 3.5vw;
+	width: 3.5vmax;
+	height: 3.5vmax;
 	max-width: 100%;
 	max-height: 100%;
 	position:absolute;
@@ -311,18 +310,17 @@
 	padding: 10px;
 	display: table-cell;
 	cursor: pointer;
-	transition: transform .5s ease-in-out;
 }
 #header-bar .mini-name-wrapper .mini-nameplate {
 	font-family: MyFont3;
-	font-size: 3vw;
+	font-size: 3vmax;
 	color: #eeeeee;
 	position: relative;
 	top: 20%;
 	text-align: center;
 }
 #header-bar .mini-name-wrapper .mini-namedesc {
-	font-size: 1vw;
+	font-size: 1vmax;
 	color: #73DCFF;
 	position: relative;
 	top: 15%;
@@ -330,16 +328,16 @@
 }
 #header-bar .mini-click-about, #header-bar .mini-click-resume, #header-bar .mini-click-portfolio, #header-bar .mini-click-contact {
 	position: relative;
-	top: 1.5vw;
+	top: 1.5vmax;
 	left: 0%;
 	width: 15%;
 	height: 100%;
 	padding: 10px;
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: 1.5vmax;
 	display: table-cell;
 	cursor: pointer;
-	transition: all .5s ease-in-out;
+	transition: color .5s ease-in-out;
 }
 .mini-click-about, .mini-click-resume, .mini-click-portfolio, .mini-click-contact {
 	color: #A3A3A3;
@@ -372,7 +370,7 @@
 #aboutme {
 	font-family: MyFont2;
 	text-align: left;
-	font-size: 1vw;
+	font-size: 1vmax;
 	color: #FFFFFF;
 	padding-top: 2%;
 	padding-left: 10%;
@@ -394,7 +392,7 @@
 	font-family: MyFont2;
 	text-align: left;
 	vertical-align: middle;
-	font-size: 1.5vw;
+	font-size: 1.5vmax;
 	color: #FFFFFF;
 }
 
@@ -407,7 +405,7 @@
 	font-family: MyFont2;
 	text-align: right;
 	vertical-align: middle;
-	font-size: 1.5vw;
+	font-size: 1.5vmax;
 	color: #FFFFFF;
 	padding-right: 15%;
 }
@@ -417,7 +415,7 @@
 	text-align: left;
 	vertical-align: middle;
 	color: #FFFFFF;
-	font-size: 1.1vw;
+	font-size: 1.1vmax;
 	padding-left: 10%;
 	padding-right: 10%;
 	padding-top: 1%;
@@ -436,7 +434,7 @@
 	font-family: MyFont2;
 	text-align: left;
 	vertical-align: middle;
-	font-size: 1.1vw;
+	font-size: 1.1vmax;
 	color: #FFFFFF;
 	padding-right: 10%;
 }
@@ -445,7 +443,7 @@
 	font-family: MyFont2;
 	text-align: left;
 	vertical-align: middle;
-	font-size: 1.1vw;
+	font-size: 1.1vmax;
 	color: #A3A3A3;
 }
 
@@ -499,7 +497,7 @@
 
 .portfolio-wrap {
 	font-family: MyFont2;
-	font-size: 1.5vw;
+	font-size: 1.5vmax;
 	color: #FFFFFF;
 	padding-top: 2%;
 	padding-bottom: 2%;
@@ -524,6 +522,13 @@
 html, html a {
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 body {
 	background-image: url('../images/background.png');
