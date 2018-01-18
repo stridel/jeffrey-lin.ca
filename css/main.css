@@ -544,3 +544,11 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+
+.cons { 
+	font-family: MyFont2;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 2vmax;
+	color: #FFFFFF;
+}
