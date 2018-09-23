@@ -1,179 +1,165 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118890945-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		  gtag('config', 'UA-118890945-1');
-		</script>
-		<!-- Title -->
-		<title>Jeffrey Lin</title>
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/jquery.fullPage.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-		<script src="js/modernizr-2.6.2.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css"/>
+		
+		<title>Jeffrey Lin | Full Stack Developer</title>
 	</head>
 	<body>
-		<!--Loader-->
-		<div id="loader-wrapper">
-			<div id="loader"></div>
-			<div id="loader-text-wrapper">
-				<div class="loader-text"><img src="images/newlogo2.png" width="100%" height="100%"></div>
+		<nav class="navbar navbar-fixed-top navbar-custom">
+			<div class="container-fluid">
+				<!--<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-wrap" aria-controls="nav-wrap" aria-expanded="false" aria-label="Toggle Navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>-->
+				<div id="nav-wrap">
+					<ul class="navbar-nav">
+						<li>
+							<a href="#about" class="nav-link smooth-scroll" target="_parent">ABOUT</a>
+						</li>
+						<li>
+							<a href="#works" class="nav-link smooth-scroll" target="_parent">WORKS</a>
+						</li>
+						<li>
+							<a href="#contact" class="nav-link smooth-scroll" target="_parent">CONTACT</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="loader-background"></div>
+		</nav>
+		<div id="banner">
+			<img class="logo" src="img/gold_logo.png" alt="JL">
+			<h1 id="name">JEFFREY<strong>LIN</strong></h1>
+			<div class="container-fluid next-btn">
+				<a href="#about" class="smooth-scroll"><i class="fa fa-angle-double-down next-arrow"></i></a>
+			</div>
 		</div>
-		<header>
-			<div id="header-bar">
-				<div class="mini-click-about" onclick="document.location='#about'">about</div>
-				<div class="mini-click-resume" onclick="document.location='#resume'">resume</div>
-				<div class="mini-name-wrapper" onclick="document.location='#main'">
-					<div class="mini-nameplate">JEFFREY S. LIN</div>
-					<div class="mini-namedesc">Student, Software Developer & Website Designer</div>
-				</div>
-				<div class="mini-click-portfolio" onclick="document.location='#portfolio'">portfolio</div>
-				<div class="mini-click-contact" onclick="document.location='#contact'">contact</div>
-			</div>
-		</header>
-		<div id="fullpage">
-			<div id="sub0" class="section">
-				<div id="buffer"></div>
-				<div id="navigate">
-					<div class="click-about" onclick="document.location='#about'">about</div>
-					<div class="click-resume" onclick="document.location='#resume'">resume</div>
-					<div class="name-wrapper">
-						<div class="nameplate">JEFFREY LIN
-							<div class="namedesc">Student, Software Developer & Website Designer</div>
-						</div>
+		<div id="about">
+			<div class="container-fluid section-container">
+				<h1 class="section-title">ABOUT</h1>
+				<p class="content">Hello, I’m Jeffrey.</br>I study Computer Science at the University of Waterloo and Business Administration at Wilfrid Laurier University, expecting to graduate in the class of 2022. Oh, and I love to make nice things.</p>
+				</br>
+				<p class="content">I enjoy crafting clean, beautiful and efficient programs. I am proficient in the following technologies:</p>	
+				<div class="skill-wrap">
+					<div class="skill-list l-list">
+						<h2 class="sub-title invert-dgold">LANGUAGES</h2>
+						<ul>
+							<li>Java</li>
+							<li>C/C++</li>
+							<li>C#.NET</li>
+							<li>Lua</li>
+							<li>JavaScript</li>
+							<li>ActionScript3</li>
+							<li>HTML/CSS</li>
+							<li>Racket</li>
+						</ul>
 					</div>
-					<div class="click-portfolio" onclick="document.location='#portfolio'">portfolio</div>
-					<div class="click-contact" onclick="document.location='#contact'">contact</div>
-				</div>
-				<div id="buffer"></div>
-			</div>
-			<div id="sub1" class="section scroll2">
-				<div id="mypic"><img src="images/newlogo2.png" width="26%" height="26%"></div>
-				<div id="aboutme">My name is Jeffrey Lin, and I am currently studying Computer Science and Business Administration at the University of Waterloo. </br></br>
-				Like most teens, one of my favorite pastimes was playing video games. However, I quickly grew tired of the grinding aspect of games, and decided to look for a way to automate the process. 
-				I began developing different bots and scripts for games that I enjoy, and thus programming has become one of my passions ever since. </br></br>
-				I also enjoy graphic design, so I create modern and simplistic user interfaces deisgns for the programs and websites I develop.
-				</div>
-			</div>
-			<div id="sub2" class="section scroll3">
-			<div class="wrapper">
-				<div id="left-icon"><img src="images/icons/user-9.png" width="40%" height="40%"></div>
-				<div id="skills-title">skills and qualifications</div>
-			</div>
-			<div class="wrapper-desc">
-				<div class="wrapper-skill">
-					<div id="skill-left">
-						<div class="skill-name">Java</div>
-						<div id = "skill-bar">
-							<div id="mbar">
-								<div id="my-mastery-java"></div>
-							</div>
-						</div>
+					<div class="skill-list r-list">
+						<h2 class="sub-title invert-dgold">SOFTWARE</h2>
+						<ul>
+							<li>Eclipse IDE</li>
+							<li>Visual Studio</li>
+							<li>Bash</li>
+							<li>Git/GitHub</li>
+							<li>WP/Drupal</li>
+							<li>Jira</li>
+							<li>Creative Suite</li>
+							<li>Linux/Windows</li>
+						</ul>
 					</div>
-					<div id="skill-left">
-						<div class="skill-name">C#</div>
-						<div id = "skill-bar">
-							<div id="mbar">
-								<div id="my-mastery-c"></div>
-							</div>
+				</div>
+				<button class="btn-resume">
+					<a href="new_resume.pdf">
+						<div class="btn-inner">
+							<i class="fa fa-download btn-icon"></i>
+							<p class="btn-text">MY RESUMÉ</p>
 						</div>
-					</div>	
-				</div>
-				<div class="wrapper-skill">
-					<div id="skill-left">
-						<div class="skill-name">Adobe ActionScript3</div>
-						<div id = "skill-bar">
-							<div id="mbar">
-								<div id="my-mastery-as3"></div>
-							</div>
-						</div>
-					</div>
-					<div id="skill-left">
-						<div class="skill-name">Lua</div>
-						<div id = "skill-bar">
-							<div id="mbar">
-								<div id="my-mastery-lua"></div>
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="wrapper-skill">
-					<div id="skill-left">
-						<div class="skill-name">HTML</div>
-						<div id = "skill-bar">
-							<div id="mbar">
-								<div id="my-mastery-html"></div>
-							</div>
-						</div>
-					</div>
-					<div id="skill-left">
-						<div class="skill-name">JavaScript</div>
-						<div id = "skill-bar">
-							<div id="mbar">
-								<div id="my-mastery-js"></div>
-							</div>
-						</div>
-					</div>	
-				</div>
+					</a>
+				</button>
 			</div>
-			<div class="wrapper">
-				<div id="right-icon"><img src="images/icons/pencil.png" width="40%" height="40%"></div>
-				<div id="skills-title-r">education background</div>
-			</div>
-			<div class="wrapper-desc">
-				<div class="wrapper-education">
-				<div id="date">
-					Expected 2022
-				</div>
-				<div id="edu-desc">
-				University of Waterloo - Candidate for Bachelors in Computer Science
-				</div></div>
-				<div class="wrapper-education">
-				<div id="date">
-					Expected 2022
-				</div>
-				<div id="edu-desc">
-				Wilfrid Laurier University - Candidate for Bachelors in Business Administration
-				</div></div>
-				<div class="wrapper-education">
-				<div id="date">
-					2013-2017
-				</div>
-				<div id="edu-desc">
-				Victoria Park Collegiate Institute - OSSD and International Baccalaureate Diploma
-				</div></div>
-			</div>
-			</div>
-			<!-- Under Construction
-			<div id="sub3" class="section scroll4">
-			<div class="portfolio-wrap">
-				<div id="project-left">project 1</div>
-				<div id="project-right">project 2</div>
-			</div>
-			</div>
-			-->
-			<div id="sub3" class="section scroll4 cons">This page is under construction.</div>
-			<div id="sub4" class="section scroll5 cons">This page is under construction.</div>
 		</div>
-		<footer>
-			<div id="scrolldown-wrapper">
-				<a id="scroll-button" href="#about"><img src="images/icons/next.png" class="godown"></a>
+		<div id="works">
+			<div class="container-fluid section-container">
+				<h1 class="section-title">WORKS</h1>
+				<div class="wrap-project">
+					<div class="project">
+						<h2 class="sub-title invert-dgold project-name">COLLEAGA MARKETING WEBSITE</h2>
+						<p class="project-desc">A responsive website was built to market Colleaga, an online healthcare platform, to customers and investors.</p>
+						<div class="used-tech">
+							<span class="tech-soft">Creative Suite</span>
+							<span class="tech-soft">Drupal</span>
+							<span class="tech-soft">Git</span>
+							<span class="tech-soft">Jira</span>
+							<span class="tech-lang">HTML/CSS</span>
+							<span class="tech-lang">JavaScript</span>
+							<span class="tech-lang">PHP</span>
+						</div>
+					</div>
+					<div class="project">
+						<h2 class="sub-title invert-dgold project-name">C# DISCORD BOT</h2>
+						<p class="project-desc">A Discord bot written in C# that utilizes various APIs and web scraping methods to track live outcomes of sports games.</p>
+						<div class="used-tech">
+							<span class="tech-soft">Visual Studio</span>
+							<span class="tech-soft">Bash</span>
+							<span class="tech-soft">Linux</span>
+							<span class="tech-soft">GitHub</span>
+							<span class="tech-lang">C#.NET</span>
+							<span class="tech-lang">HTML</span>
+						</div>
+					</div>
+					<div class="project">
+						<h2 class="sub-title invert-dgold project-name">C# MMORPG BOT</h2>
+						<p class="project-desc">A bot that allows full automation in completing in-game tasks through the use of AI.</p>
+						<div class="used-tech">
+							<span class="tech-soft">Visual Studio</span>
+							<span class="tech-soft">Bash</span>
+							<span class="tech-soft">Creative Suite</span>
+							<span class="tech-soft">Wireshark</span>
+							<span class="tech-soft">RABCDAsm</span>
+							<span class="tech-lang">C#.NET</span>
+							<span class="tech-lang">JavaScript</span>
+						</div>
+					</div>
+					<div class="project">
+						<h2 class="sub-title invert-dgold project-name">MMORPG SCRIPTING PLATFORM</h2>
+						<p class="project-desc">A beginner friendly pseudo-scripting platform that allows users to create their own scripts to automate gameplay.</p>
+						<div class="used-tech">
+							<span class="tech-soft">Creative Suite</span>
+							<span class="tech-soft">Flash CS3</span>
+							<span class="tech-soft">Wireshark</span>
+							<span class="tech-soft">RABCDAsm</span>
+							<span class="tech-lang">JavaScript</span>
+							<span class="tech-lang">ActionScript3</span>
+						</div>
+					</div>
+				</div>
 			</div>
-		</footer>
-	</body>
+		</div>
+		<div id="contact">
+			<div class="container-fluid section-container">
+				<h1 class="section-title invert-gold">CONTACT</h1>
+				<p class="content invert-light">Anything catch your eye, or have any questions? Feel free to email me to talk!</p>
+				<a onClick="copyEmail()" style="text-decoration: none;"><p class="content invert-gold">jeffrey.lin@uwaterloo.ca</p></a>
+				<p class="content invert-light">Or alternatively, connect with me here:</p>
+				<div class="social-media">
+					<a href="https://github.com/stridel"><i class="fa fa-github-square social-icon-l"></i></a>
+					<a href="https://www.linkedin.com/in/jeffreyshlin/"><i class="fa fa-linkedin-square social-icon-r"></i></a>
+				</div>
+				<img class="logo-footer" src="img/gold_logo.png" alt="JL">
+				<h2 class="sub-title footer-copyright">COPYRIGHT © JEFFREY (SHIHUI) LIN 2018</h2>
+			</div>
+		</div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+		<script src="js/main.js"></script>
+		
 </html>
-  
