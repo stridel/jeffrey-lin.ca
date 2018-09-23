@@ -1,85 +1,47 @@
-/*Loader Timeout*/
-$(document).ready(function() {
-	//Scroll key animation pt.1
-	$('body').addClass('ismainpage');
+$(document).ready(function () {
 	
-    setTimeout(function() {
-        $('body').addClass('loaded');
-		$('body').addClass('loadmenu');
-		
-		$('#fullpage').fullpage( {
-			anchors:['main', 'about', 'resume', 'portfolio', 'contact'],
-			scrollingSpeed: 1500,
-			
-			onLeave: function(index, nextIndex, direction){
-				//Main Page Animation Fix pt.1
-				if(nextIndex == 1) {
-					$('body').removeClass('accessmenu');
-				}
-				//Scroll Key href
-				if(nextIndex == 1) {
-					document.getElementById("scroll-button").setAttribute('href', "#about");
-				} else if(nextIndex == 2) {
-					document.getElementById("scroll-button").setAttribute('href', "#resume");
-				} else if(nextIndex == 3) {
-					document.getElementById("scroll-button").setAttribute('href', "#portfolio");
-				} else if(nextIndex == 4) {
-					document.getElementById("scroll-button").setAttribute('href', "#contact");
-				}	
-				//Scroll Key animation pt.2
-				if (nextIndex != 1) {
-					setTimeout(function() {
-						$('body').addClass('notmainpage');
-					},100);
-				} else {
-					$('body').removeClass('notmainpage');
-				}
-				if (nextIndex == 5) {
-					$('body').addClass('islastpage');
-				} else {
-					$('body').removeClass('islastpage');
-				}
-				//Menu Bar
-				$('body').removeClass('p1'); $('body').removeClass('p2'); $('body').removeClass('p3'); $('body').removeClass('p4');
-				if (nextIndex == 2) {
-					$('body').addClass('p1');
-				} else if(nextIndex == 3) {
-					$('body').addClass('p2');
-				} else if(nextIndex == 4) {
-					$('body').addClass('p3');
-				} else if(nextIndex == 5) {
-					$('body').addClass('p4');
-				}
-				console.log('1:'+ (index - 1));
-				var subString = 'sub';
-				if (index != 1) {
-					setTimeout(function(){
-					var curElem = document.getElementById(subString.concat(String(index - 1)));
-					curElem.style.transition = 'opacity 1.5s ease-in';
-					}, 500);
-				}
-			},
-			
-			//Main Page Animation Fix pt.2
-			afterLoad: function(anchorLink, index){
-				if(index == 1) {
-					setTimeout(function() {
-						$('body').addClass('accessmenu');
-					}, 1000);
-				}
-				console.log('0.25:'+ (index - 1));
-				var subString = 'sub';
-				if (index != 1) {
-					var nextElem = document.getElementById(subString.concat(String(index - 1)));
-					nextElem.style.transition = 'opacity 0.25s ease-in-out';
-				}
-				
-				
-			},
+	$(document).on("scroll", onScroll);
+	
+	/* Smooth Scrolling */
+	$(function() {
+		$('a.smooth-scroll').bind('click', function(event) {
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1500, 'easeInOutExpo');
+			event.preventDefault();
 		});
-    }, 4000);
-	setTimeout(function(){
-		$('body').removeClass('loadmenu');
-		$('body').addClass('scroll-fade-in');
-    }, 7000);
+	});
+
+	/ *Navigation Bar Animation */
+	$(window).scroll(function() {
+		if ($(".navbar-custom").offset().top > 50) {
+			$(".navbar-custom").addClass("nav-sticky");
+		} else {
+			$(".navbar-custom").removeClass("nav-sticky");
+		}
+	});
+
+	// Activate scrollspy to add active class to navbar items on scroll
+	$('body').scrollspy({
+		target: '#mainNav',
+		offset: 54
+	});
+	
+	
 });
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#nav-wrap a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top - (refElement.height() * 5 / 10) <= scrollPos && refElement.position().top + (refElement.height() * 7 / 10) > scrollPos) {
+            $('#nav-wrap ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
